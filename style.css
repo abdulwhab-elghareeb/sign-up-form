@@ -83,6 +83,8 @@ isolation: isolate;
     --cornsilk: hsla(52, 94%, 94%, 1);
     --sunlit-clay: hsla(32, 65%, 62%, 1);
     --copperwood: hsla(28, 67%, 44%, 1);
+
+    --shadow : 1px 2px 5px gray;
 }
 
 body{
@@ -153,6 +155,7 @@ a:hover{
 .form-note{
     margin-bottom: 1rem; 
 }
+
 .main-content{
     display: flex;
     flex-direction: column;
@@ -169,7 +172,7 @@ a:hover{
     background-color: hsl(0,0%,98%);
     padding: 4rem;
     margin: -4rem;
-    box-shadow: 1px 2px 7px gray;
+    box-shadow: var(--shadow);
 
 }
 
@@ -219,7 +222,7 @@ input:user-valid + span::after{
 input:hover,
 input:focus{
     background-color: hsl(0, 0%, 98%);
-    box-shadow: 1px 2px 5px ;
+    box-shadow: var(--shadow);
     transition: 0.3s;
 }
 
@@ -232,14 +235,14 @@ label:has(+ input:hover){
 button[type="submit"]{
     margin-top: 100px;
     padding: 0.25rem 0.5rem;
-
     border-radius: 8px;
+
     width: 15rem;
     height: 3rem;
     
     background-color: var(--cornsilk);
     color: var(--olive-leaf);
-
+    box-shadow: var(--shadow);
     transition: 0.4s;
 }
 
