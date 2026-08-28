@@ -143,6 +143,13 @@ a:hover{
 /* side section */
 
 /* main content */
+.main-text{
+    max-inline-size: 66ch;
+}
+.quote{
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
 .form-note{
     margin-bottom: 1rem; 
 }
@@ -150,6 +157,8 @@ a:hover{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    width: 100%;
+
     padding: 4rem;
     gap: 4rem;
     
