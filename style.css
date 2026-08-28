@@ -1,8 +1,8 @@
 /* fonts */
 @font-face {
     font-family: 'BAR SADY';
-    src: url('BARSADY-Regular.woff2') format('woff2'),
-        url('BARSADY-Regular.woff') format('woff');
+    src: url('./fonts/bar-sady-font/BARSADY-Regular.woff2') format('woff2'),
+        url('./fonts/bar-sady-font/BARSADY-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -10,17 +10,17 @@
 
 @font-face {
     font-family: 'Ubuntu Mono';
-    src: url('UbuntuMono-Regular.woff2') format('woff2'),
-        url('UbuntuMono-Regular.woff') format('woff');
+    src: url('./fonts/ubuntu-font/UbuntuMono-Regular.woff2') format('woff2'),
+        url('./fonts/ubuntu-font/UbuntuMono-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
 @font-face {
     font-family: 'Ubuntu';
-    src: url('Ubuntu-Medium.woff2') format('woff2'),
-        url('Ubuntu-Medium.woff') format('woff');
-    font-weight: 500;
+    src: url('./fonts/ubuntu-font/Ubuntu-Medium.woff2') format('woff2'),
+        url('./fonts/ubuntu-font/Ubuntu-Medium.woff') format('woff');
+    font-weight: 300;
     font-style: normal;
     font-display: swap;
 }
@@ -73,3 +73,59 @@ text-wrap: balance;
 isolation: isolate;
 }
 /* Reset */
+
+:root{
+    --primary-font : 'Ubuntu';
+    --form-font : 'Ubuntu Mono';
+    --icon-font : 'BAR SADY';
+
+    --primary-color : hsl(34, 78%, 91%);
+    --text-color : hsl(74, 32%, 40%);
+}
+
+/* side section */
+.side-section{
+    display: flex;
+    justify-content: center;
+
+    position:relative;
+    width: 40%;
+    height: 100vh;
+}
+.side-section-img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+.side-section-header{    
+    position: absolute;
+    top: 40%;
+    width: 100%;
+    height: 8rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    
+    font-family: var(--icon-font);
+    font-size: 30px;
+    letter-spacing: 0.25rem;
+    text-align: center;
+    
+    background-color:var(--primary-color);
+    color: var(--text-color);
+    opacity: 0.8;
+}
+.logo{
+    width: 8rem ;
+    margin: 0 0 1rem -3rem;
+    opacity: 1;
+}
+.img-credit{
+    font-family:var(--form-font);
+    align-self: flex-end;
+
+}
+/* side section */
