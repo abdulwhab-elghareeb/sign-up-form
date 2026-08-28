@@ -48,7 +48,7 @@
                     
                     <div>
                         <label for="user-phone">PHONE NUMBER *</label>
-                        <input type="number" name="user-phone" id="user-phone" required pattern="^\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}$" placeholder="555-123-4567">
+                        <input type="tel" inputmode="numeric" name="user-phone" id="user-phone" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" minlength="12" maxlength"12" placeholder="555-123-4567">
                         <span></span>
                     </div>
 
