@@ -17,10 +17,10 @@
     font-display: swap;
 }
 @font-face {
-    font-family: 'Ubuntu';
-    src: url('./fonts/ubuntu-font/Ubuntu-Medium.woff2') format('woff2'),
-        url('./fonts/ubuntu-font/Ubuntu-Medium.woff') format('woff');
-    font-weight: 300;
+    font-family: 'Open Sans';
+    src: url('./fonts/open-sans-font/OpenSans.woff2') format('woff2'),
+        url('./fonts/open-sans-font/OpenSans.woff') format('woff');
+    font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
@@ -75,7 +75,7 @@ isolation: isolate;
 /* Reset */
 
 :root{
-    --primary-font : sans-serif;
+    --primary-font : "Open Sans";
     --form-font : 'Ubuntu Mono';
     --icon-font : 'BAR SADY';
     --olive-leaf: hsla(74, 32%, 32%, 1);
@@ -92,6 +92,7 @@ body{
     width: 100vw;
     display: flex;
     font-family: var(--primary-font);
+    
 }
 a:hover{
     color: var(--copperwood);
@@ -138,10 +139,10 @@ a:hover{
     margin: 0 0 1rem -3rem;
 }
 .img-credit{
-    font-family:var(--form-font);
+    font-family: var(--form-font);
     align-self: flex-end;
-
 }
+
 /* side section */
 
 /* main content */
@@ -153,7 +154,7 @@ a:hover{
     margin-bottom: 1rem;
 }
 .form-note{
-    margin-bottom: 1rem; 
+    margin: 1rem 0; 
 }
 
 .main-content{
