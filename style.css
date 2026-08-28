@@ -56,6 +56,7 @@ max-width: 100%;
 
 input, button, textarea, select {
 font: inherit;
+color: inherit;
 }
 
 p, h1, h2, h3, h4, h5, h6 {
@@ -73,31 +74,70 @@ text-wrap: balance;
 isolation: isolate;
 }
 /* Reset */
-
 :root{
     --primary-font : "Open Sans";
     --form-font : 'Ubuntu Mono';
     --icon-font : 'BAR SADY';
+
+    --main-content-gap-padding: 4rem ;
+}
+:root.light{
     --button-hover: hsla(74, 32%, 32%, 1);
     --logo-header: hsla(88, 38%, 15%, 1);
     --background-color: hsla(52, 94%, 94%, 1);
     --label-link: hsla(28, 67%, 44%, 1);
-
+    --main-form :  hsl(19, 100%, 98%);
+    --input-hover: hsl(19, 100%, 90%);
+    --font-color:black;
     --shadow : 1px 2px 5px gray;
-}
 
+}
+:root.dark{
+    --button-hover: hsl(214, 23%, 56%);
+    --logo-header: #e0e1dd;
+    --background-color: hsl(211, 53%, 11%);
+    --label-link: hsl(278, 100%, 70%);
+    --main-form : hsl(219, 37%, 20%);
+    --input-hover: hsl(270, 73%, 40%);
+    --font-color: hsl(0, 50%, 90%);
+    --visited : #00a6fb;
+    --shadow : 1px 1px 3px hsl(0, 0%, 2%);
+    --button :hsl(219, 37%, 25%);
+
+    
+}
+*{
+    transition: 0.35s;
+}
 body{
     font-size: 18px;
     width: 100vw;
+    height: 100vh;
     display: flex;
     font-family: var(--primary-font);
-    
+    color: var(--font-color);
 }
+.mode{
+    position: absolute;
+    top: -80px;
+    right: 20px;
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    border-style: none;
+}
+.mode > img{
+    text-align: center;
+    width: 4rem;
+}
+
 a:hover,
 a:focus{
     color: var(--label-link);
     text-decoration: none;
-    transition: 0.7s;
+}
+a:visited:not(:hover){
+    color: var(--visited);
 }
 /* side section */
 .side-section{
@@ -108,6 +148,7 @@ a:focus{
     width: 40%;
     height: 100vh;
 }
+
 .side-section-img{
     position: absolute;
     width: 100%;
@@ -141,11 +182,24 @@ a:focus{
 .img-credit{
     font-family: var(--form-font);
     align-self: flex-end;
+    color: black;
 }
 
 /* side section */
 
 /* main content */
+.main-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 100%;
+
+    padding: var(--main-content-gap-padding);
+    gap: var(--main-content-gap-padding);
+    
+
+    background-color: var(--background-color);
+}
 .main-text{
     max-inline-size: 66ch;
 }
@@ -154,28 +208,17 @@ a:focus{
     margin-bottom: 1rem;
 }
 .form-note{
-    margin: 1rem 0; 
+    margin: 1rem 0 0.5rem 0; 
 }
 
-.main-content{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    width: 100%;
-
-    padding: 4rem;
-    gap: 4rem;
-    
-
-    background-color: var(--background-color);
-}
 .main-form-wrapper{
-    background-color:  hsl(19, 100%, 98%);
-    padding: 4rem;
-    margin: -4rem;
+    background-color: var(--main-form);
+    padding: var(--main-content-gap-padding);
+    margin: calc( var(--main-content-gap-padding) - (var(--main-content-gap-padding) * 2));
     box-shadow: var(--shadow);
 
 }
+
 
 .form-inputs{
     width: 600px;
@@ -189,8 +232,6 @@ label{
     font-family: var(--form-font);
     letter-spacing: 0.1rem;
     margin-left: 4px;
-
-    transition: 0.4s;
 }
 input{
     background-color: var(--background-color);
@@ -201,7 +242,6 @@ input{
     border: 1px solid hsl(0, 0%, 20%);
     padding: 0.15rem 0.5rem;
 
-    transition: 0.4s;
 }
 input:user-invalid{
     border-color: rgb(167, 19, 19);
@@ -222,36 +262,38 @@ input:user-valid + span::after{
 }
 input:hover,
 input:focus{
-    background-color: hsl(19, 100%, 90%);
+    background-color: var(--input-hover);
     box-shadow: var(--shadow);
-    transition: 0.3s;
 }
 
 label:has(+ input:focus),
 label:has(+ input:hover){
     color: var(--label-link);
     padding-left: 1rem;
-    transition: 0.3s;
 }
-button[type="submit"]{
+button{
+    outline: none;
     margin-top: 100px;
     padding: 0.25rem 0.5rem;
     border-radius: 8px;
+    border-style:none ;
 
     width: 15rem;
     height: 3rem;
     
-    background-color: var(--background-color);
+    background-color: var(--button,var(--background-color));
     color: var(--button-hover);
     box-shadow: var(--shadow);
-    transition: 0.4s;
+    cursor: pointer;
 }
 
 button:hover{
     background-color: var(--button-hover);
     color: var(--background-color) ;
     margin-left: 10px;
-    transition: 0.3s;
+}
+button:active{
+    padding: 3px;
 }
 .log-in{
     margin-top: 2rem;
