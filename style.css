@@ -165,10 +165,10 @@ a:hover{
 }
 
 .form-inputs{
-    width: 550px;
+    width: 600px;
     display: flex;
     flex-wrap: wrap;
-    gap: 40px;
+    gap: 2rem 5rem;
 }
 label{
     display: block;
@@ -224,11 +224,10 @@ button[type="submit"]{
     margin-top: 100px;
     padding: 0.25rem 0.5rem;
 
-    border: 1px solid --olive-leaf;
     border-radius: 8px;
     width: 15rem;
     height: 3rem;
-
+    
     background-color: var(--cornsilk);
     color: var(--olive-leaf);
 
@@ -238,7 +237,7 @@ button[type="submit"]{
 button:hover{
     background-color: var(--olive-leaf);
     color: var(--cornsilk) ;
-    margin-left: 5px;
+    margin-left: 10px;
     transition: 0.3s;
 }
 .log-in{
