@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 520" role="img">
+<title>Single realistic leaf emblem</title>
+<desc>One naturalistic leaf with a curved midrib and branching veins, surrounded by faint ghost repeats of the same leaf to suggest a repeating pattern.</desc>
+<defs>
+<g id="leafgroup">
+<path id="leafoutline" d="M340,470 Q335,450 332,430 C300,400 290,340 300,280 C305,240 320,210 340,190 C365,215 380,250 378,300 C376,350 365,400 348,430 Q345,450 340,470 Z"/>
+<path id="midrib" d="M340,425 Q345,320 340,195" fill="none"/>
+</g>
+</defs>
+
+<g transform="rotate(45 340 427)" opacity="0.4">
+<use href="#leafoutline" fill="none" stroke="#28394a" stroke-width="1"/>
+</g>
+<g transform="rotate(-45 340 427)" opacity="0.4">
+<use href="#leafoutline" fill="none" stroke="#28394a" stroke-width="1"/>
+</g>
+<g transform="rotate(90 340 427)" opacity="0.35">
+<use href="#leafoutline" fill="none" stroke="#28394a" stroke-width="1"/>
+</g>
+
+<use href="#leafoutline" fill="#f2e8d9" fill-opacity="0.82" stroke="#28394a" stroke-width="1" stroke-opacity="0.5"/>
+<use href="#midrib" stroke="#28394a" stroke-width="0.6" stroke-opacity="0.4"/>
+
+<line x1="338" y1="400" x2="308" y2="368" stroke="#28394a" stroke-width="0.5" stroke-opacity="0.35"/>
+<line x1="340" y1="360" x2="367" y2="334" stroke="#28394a" stroke-width="0.5" stroke-opacity="0.35"/>
+<line x1="339" y1="320" x2="311" y2="293" stroke="#28394a" stroke-width="0.5" stroke-opacity="0.35"/>
+<line x1="340" y1="280" x2="363" y2="256" stroke="#28394a" stroke-width="0.5" stroke-opacity="0.35"/>
+<line x1="340" y1="240" x2="317" y2="220" stroke="#28394a" stroke-width="0.5" stroke-opacity="0.35"/>
+
+<circle cx="340" cy="427" r="4" fill="#c98a5a" fill-opacity="0.75"/>
+</svg>

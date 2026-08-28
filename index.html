@@ -4,9 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Asanoha</title>
 </head>
 <body>
-    
+    <div class="side-section">
+        <img src="./imgs/jason-leung-UMncYEfO9-U-unsplash.jpg" alt="Image containing a pattern of star-like shapes inside a circle, with colors gradating from dark blue to golden from top to bottom" width="800px" height="auto">
+        <div class="side-section-header"><img src="./imgs/asanoha.svg" alt="a four leafs logo" width="100px" height="auto">Logo</div>
+        <div class="img-credit">
+            Photo by 
+            <a href="https://unsplash.com/@ninjason?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Jason Leung</a> 
+            on 
+            <a href="https://unsplash.com/photos/a-blue-and-white-abstract-background-with-circles-UMncYEfO9-U?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="main-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste nihil beatae reiciendis labore, rerum porro aliquid molestias quam ullam? Inventore facere provident vitae. Aliquid mollitia eos perspiciatis architecto odio minima.</div>
+        <form action="" method="get">
+            <h2 class="form-header">Let's do this!</h2>
+            <div class="form-note">Please complete all required (*) fields.</div>
+            <section class="form-inputs">
+                <div>
+                    <label for="first-name">FIRST NAME</label>
+                    <input type="text" name="first-name" id="first-name" minlength="1" maxlength="30">
+                </div>
+                
+                <div>
+                    <label for="last-name">LAST NAME</label>
+                    <input type="text" name="last-name" id="last-name" minlength="1" maxlength="30">
+                </div>
+
+                <div>
+                    <label for="user-email">EMAIL *</label>
+                    <input type="email" name="user-email" id="user-email" required>
+                </div>
+                
+                <div>
+                    <label for="user-phone">PHONE NUMBER *</label>
+                    <input type="tel" name="user-phone" id="user-phone" required pattern="(\d{5}([\-]\d{4})?)">
+                </div>
+
+                <div>
+                    <label for="user-password">password *</label>
+                    <input type="password" name="user-password" id="user-password" required minlength="8" maxlength="20">
+                </div>
+                
+                <div>
+                    <label for="confirm-password">CONFIRM PASSWORD *</label>
+                    <input type="password" name="confirm-password" id="confirm-password" required minlength="8" maxlength="20">
+                </div>
+            </section>
+
+            <section class="submit-btn">
+                <div>
+                    <button type="submit">Create Account</button>
+                </div>
+            </section>
+
+        </form>
+        <div class="log-in">Already have an account? <a href="">Log in</a> </div>
+
+    </div>
 </body>
 </html>
