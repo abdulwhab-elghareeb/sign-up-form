@@ -82,7 +82,7 @@ isolation: isolate;
     --main-content-gap-padding: 4rem ;
 }
 :root.light{
-    --button-hover: hsla(74, 32%, 32%, 1);
+    --button-hover-click: hsla(74, 32%, 32%, 1);
     --logo-header: hsla(88, 38%, 15%, 1);
     --background-color: hsla(52, 94%, 94%, 1);
     --label-link: hsla(28, 67%, 44%, 1);
@@ -93,12 +93,12 @@ isolation: isolate;
 
 }
 :root.dark{
-    --button-hover: hsl(214, 23%, 56%);
+    --button-hover-click: hsl(214, 23%, 76%);
     --logo-header: #e0e1dd;
     --background-color: hsl(211, 53%, 11%);
     --label-link: hsl(278, 100%, 70%);
     --main-form : hsl(219, 37%, 20%);
-    --input-hover: hsl(270, 73%, 40%);
+    --input-hover: hsl(270, 73%, 25%);
     --font-color: hsl(0, 50%, 90%);
     --visited : #00a6fb;
     --shadow : 1px 1px 3px hsl(0, 0%, 2%);
@@ -110,12 +110,14 @@ isolation: isolate;
     transition: 0.35s;
 }
 body{
+    letter-spacing: 0.13rem;
     font-size: 18px;
     width: 100vw;
     height: 100vh;
     display: flex;
     font-family: var(--primary-font);
     color: var(--font-color);
+    overflow: hidden;
 }
 .mode{
     position: absolute;
@@ -127,7 +129,6 @@ body{
     border-style: none;
 }
 .mode > img{
-    text-align: center;
     width: 4rem;
 }
 
@@ -148,7 +149,6 @@ a:visited:not(:hover){
     width: 40%;
     height: 100vh;
 }
-
 .side-section-img{
     position: absolute;
     width: 100%;
@@ -216,9 +216,7 @@ a:visited:not(:hover){
     padding: var(--main-content-gap-padding);
     margin: calc( var(--main-content-gap-padding) - (var(--main-content-gap-padding) * 2));
     box-shadow: var(--shadow);
-
 }
-
 
 .form-inputs{
     width: 600px;
@@ -226,6 +224,7 @@ a:visited:not(:hover){
     flex-wrap: wrap;
     gap: 2rem 5rem;
 }
+
 label{
     display: block;
     font-size: 0.9rem;
@@ -240,7 +239,7 @@ input{
 
     border-radius: 4px;
     border: 1px solid hsl(0, 0%, 20%);
-    padding: 0.15rem 0.5rem;
+    padding: 0.25rem 0.5rem;
 
 }
 input:user-invalid{
@@ -282,18 +281,19 @@ button{
     height: 3rem;
     
     background-color: var(--button,var(--background-color));
-    color: var(--button-hover);
+    color: var(--button-hover-click);
     box-shadow: var(--shadow);
     cursor: pointer;
 }
 
 button:hover{
-    background-color: var(--button-hover);
+    background-color: var(--button-hover-click);
     color: var(--background-color) ;
     margin-left: 10px;
 }
 button:active{
-    padding: 3px;
+    margin-left: 15px;
+    transition: 0.1s;
 }
 .log-in{
     margin-top: 2rem;
